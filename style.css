@@ -1,0 +1,131 @@
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: "Helvetica", "Georgia", "Times New Roman", times, "serif" /*"Linux Libertine O", "serif"*/;
+    font-size: 16px;
+}
+
+.body {
+  line-height: 1.4em
+}
+
+h1 {
+  font-size: 1.75em;
+  line-height: 1.1em
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #cc0000;
+  font-family: /*Lato, */"Helvetica Neue", Helvetica, arial, "sans-serif";
+}
+
+.left-box {
+  color: #555;
+  font-style: italic
+}
+
+@media (min-width: 568px) {
+  .date {
+    margin-right: -0.5em
+  }
+
+  .left-box {
+    margin-top:   0.67em;
+    text-align:   right;
+    margin-right: 1.5em;
+    padding-left: 0em;
+  }
+
+  .left-box ul {
+    padding-left: 0em;
+  }
+
+  .left-box ul li {
+    list-style: none;
+    text-align: right
+  }
+
+  .main {
+    margin-top: 3em;
+    margin-bottom: 6em
+  }
+}
+
+@media (max-width: 567px) {
+  .left-box ul {
+    text-align: right;
+    margin-right: 1em;
+    padding-left: 0em;
+  }
+  .left-box ul li {
+    list-style: none
+  }
+
+  .date {
+    float: left;
+    margin-left: 1em
+  }
+
+  .paperdisplay img {
+    margin-right: 1em
+  }
+
+  .main {
+    margin-left: 0.4em;
+/*    margin-right: 0.2em*/
+  }
+}
+
+a {
+  color: #000;
+  font-weight: bold;
+}
+
+a:visited {
+  color: #555
+}
+
+code {
+  font-size: 0.85em
+}
+
+pre {
+  margin-left: 1em
+}
+
+.displaylink {
+  text-align: center
+}
+
+.displaylink img, .paperdisplay img {
+  display:          inline;
+  align:            center;
+  padding:          0em;
+  box-shadow:       0em 0em 0.2em #000;
+}
+
+p.paperdisplay {
+  float: right;
+  margin-left: 2em;
+}
+
+div.annotation {
+  margin-left: 2em;
+  margin-right: 2em;
+  font-size:   80%;
+  line-height: 1.1em;
+  color:       #555;
+}
+
+div.annotation span.time {
+  font-weight: bold
+}
+
+/* For lists of supporting links */
+ul.supporting
+{ padding-left: 0em
+}
+
+ul.supporting li
+{ display:      inline;
+  margin-left:  0em;
+  margin-right: 1em
+}
