@@ -75,12 +75,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #000;
+  color: #04d;
   font-weight: bold;
+  text-decoration: none;
 }
 
 a:visited {
-  color: #555
+  color: #0ad
 }
 
 code {
