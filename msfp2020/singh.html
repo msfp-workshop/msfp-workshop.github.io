@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head><meta charset="UTF-8"><meta content="width=device-width, initial-scale=1" name="viewport"><link href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" rel="stylesheet"><link href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css" rel="stylesheet"><link href="../style.css" rel="stylesheet"><title>Satnam Singh</title>
+</head>
+<body>
+
+<h1>Extracting low-level formally verified circuits from Cava in Coq</h1>
+<b>Satnam Singh</b> (<i>Google Research, USA</i>)
+
+<p>   Too often we design a hardware artifact, we verify it using testing,
+and in some cases formal verification, and finally we may attribute a
+semantics to an existing circuit to see if we can understand what it
+means. For developing high assurance hardware (e.g. crypto circuits,
+silicon root of trust) this is a very unsatisfactory state of
+affairs. The difficulties are compounded when we try to somehow
+transcribe a circuit implementation in a hugely complex hardware
+description language like Verilog into the logic of a theorem
+prover.</p>
+
+<p>This talk describes an attempt to do things differently that
+views the formal specification and verification of hardware as an act
+of development intertwined with the implementation. Formal
+specification at the outset is very much used as a way of developing,
+thinking, and exploring the design space rather than being an after
+thought for a fait accompli.</p>
+
+<p>Our approach is very much inspired by the Kami project at MIT which is
+currently being used to develop RISC-V processors at the company
+SiFive. We instead focus on low level circuits and crypto accelerators
+and we have developed a different set of abstractions suited for
+describing and attributing semantics to low level circuit blocks. The
+approach we take involves recasting the Lava hardware description
+language originally developed in Haskell as a DSL in the Coq theorem
+prover. Circuit descriptions are composed using overloaded monadic
+combinators which are parameterized on the type of values flowing over
+the wires. For one interpretation we can generate circuit graphs with
+cycles which represent circuit netlists which can be converted to
+SystemVerilog hardware description (via Coq's Haskell extraction
+mechanism). Another interpretation of exactly the same structure
+yields a model of the circuit behaviour which can be used for formal
+verification against a formal specification (recurrence equations over
+streams in our case). We apply this technique to the specification and
+verification of the circuit blocks that comprise the OpenTitan silicon
+root of trust specification and reference implementation.</p>
+</body>
+</html>
